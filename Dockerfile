@@ -1,6 +1,6 @@
 FROM ubuntu
 LABEL version="7.0"
-RUN "apt-get install openjdk-8-jdk"
+RUN "apt-get install openjdk-11-jdk"
 RUN "apt-get install tomcat7" 
 ADD "/home/jenkins/jenkins/jenkins/workspace/create/gameoflife-web/target/gameoflife.war" "/var/lib/tomcat7/webapps/gameoflife.war"
 RUN "sudo service tomcat7 restart"
