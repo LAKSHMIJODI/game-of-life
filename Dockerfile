@@ -1,4 +1,5 @@
 FROM ubuntu
+RUN "sudo apt install git"
 RUN "sudo apt install openjdk-8-jdk"
 RUN "sudo apt install tomcat7" 
 ADD "/home/jenkins/jenkins/jenkins/workspace/create/gameoflife-web/target/gameoflife.war" "/var/lib/tomcat7/webapps/gameoflife.war"
